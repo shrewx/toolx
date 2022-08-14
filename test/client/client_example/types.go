@@ -1,0 +1,18 @@
+package client_example
+
+import (
+	github_com_shrewx_ginx "github.com/shrewx/ginx"
+	github_com_shrewx_toolx_example_router_crud "github.com/shrewx/toolx/__example__/router/crud"
+)
+
+type GithubComShrewxGinxAttachment = github_com_shrewx_ginx.Attachment
+
+type GithubComShrewxGinxHTML = github_com_shrewx_ginx.HTML
+
+type GithubComShrewxGinxImagePNG = github_com_shrewx_ginx.ImagePNG
+
+type GithubComShrewxToolxExampleRouterCrudCreateUserInfoResponse = github_com_shrewx_toolx_example_router_crud.CreateUserInfoResponse
+
+type GithubComShrewxToolxExampleRouterCrudGetHelloWorldResponse = github_com_shrewx_toolx_example_router_crud.GetHelloWorldResponse
+
+type GithubComShrewxToolxExampleRouterCrudGetUserInfoResponse = github_com_shrewx_toolx_example_router_crud.GetUserInfoResponse

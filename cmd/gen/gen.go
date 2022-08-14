@@ -9,4 +9,6 @@ var CmdGen = &cobra.Command{
 
 func init() {
 	CmdGen.AddCommand(statusErrorCommand())
+	CmdGen.AddCommand(openapiCommand())
+	CmdGen.AddCommand(clientCommand())
 }

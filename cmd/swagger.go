@@ -48,7 +48,7 @@ func Swagger() *cobra.Command {
 			}
 			list, err := cli.ContainerList(context.Background(), types.ContainerListOptions{
 				All:     true,
-				Filters: filters.NewArgs(filters.Arg("name", "servicex-swagger-openapi")),
+				Filters: filters.NewArgs(filters.Arg("name", "ginx-swagger-openapi")),
 			})
 			if err != nil {
 				panic(err)
@@ -74,7 +74,7 @@ func Swagger() *cobra.Command {
 			}, &container.HostConfig{
 				Binds:        []string{"/tmp/openapi.json:/swagger/openapi.json"},
 				PortBindings: portBindings,
-			}, nil, nil, "servicex-swagger-openapi")
+			}, nil, nil, "ginx-swagger-openapi")
 
 			if err != nil {
 				panic(err)
@@ -84,7 +84,7 @@ func Swagger() *cobra.Command {
 				panic(err)
 			}
 
-			log.Printf("docker start servicex-swagger-openapi container , visit http://127.0.0.1:%d", swaggerPort)
+			log.Printf("docker start ginx-swagger-openapi container , visit http://127.0.0.1:%d", swaggerPort)
 		},
 	}
 
