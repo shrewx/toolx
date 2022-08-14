@@ -2,7 +2,8 @@ server:
   server_config:
     name: example
     port: 5443
-    https: true
+    release: true
+    https: false
     ssl_config:
-      cert_file: server.crt
-      key_file: server.key
+      cert_file: config/server.crt
+      key_file: config/server.key
