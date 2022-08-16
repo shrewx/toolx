@@ -11,4 +11,5 @@ func init() {
 	CmdGen.AddCommand(statusErrorCommand())
 	CmdGen.AddCommand(openapiCommand())
 	CmdGen.AddCommand(clientCommand())
+	CmdGen.AddCommand(enumCommand())
 }
