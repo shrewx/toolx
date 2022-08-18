@@ -37,11 +37,36 @@
                     "format": "int32",
                     "description": "年龄"
                   },
+                  "city": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantCity"
+                      },
+                      {
+                        "description": "城市"
+                      }
+                    ]
+                  },
+                  "job": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantJob"
+                      },
+                      {
+                        "description": "职业"
+                      }
+                    ]
+                  },
                   "name": {
                     "type": "string",
                     "description": "名称"
                   }
                 },
+                "required": [
+                  "name",
+                  "age",
+                  "job"
+                ],
                 "description": "Body"
               }
             }
@@ -234,7 +259,8 @@
                 "properties": {
                   "file1": {
                     "type": "string",
-                    "format": "binary"
+                    "format": "binary",
+                    "x-go-star-level": 1
                   }
                 },
                 "required": [
@@ -334,6 +360,37 @@
         "format": "binary",
         "x-go-struct-name": "GithubComShrewxGinxImagePNG",
         "x-go-vendor-type": "github.com/shrewx/ginx.ImagePNG"
+      },
+      "GithubComShrewxToolxExampleConstantCity": {
+        "type": "string",
+        "enum": [
+          "beijing",
+          "chengdu",
+          "shanghai"
+        ],
+        "x-enum-labels": {
+          "beijing": "医生",
+          "chengdu": "司机",
+          "shanghai": "教师"
+        },
+        "x-go-struct-name": "GithubComShrewxToolxExampleConstantCity",
+        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant.City"
+      },
+      "GithubComShrewxToolxExampleConstantJob": {
+        "type": "string",
+        "format": "int32",
+        "enum": [
+          "DOCTOR",
+          "TEACHER",
+          "DRIVER"
+        ],
+        "x-enum-labels": {
+          "DOCTOR": "医生",
+          "DRIVER": "司机",
+          "TEACHER": "教师"
+        },
+        "x-go-struct-name": "GithubComShrewxToolxExampleConstantJob",
+        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant.Job"
       },
       "GithubComShrewxToolxExampleRouterCrudCreateUserInfoResponse": {
         "type": "object",
