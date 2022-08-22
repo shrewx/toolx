@@ -26,3 +26,5 @@ require (
 	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 	gotest.tools/v3 v3.3.0 // indirect
 )
+
+replace github.com/shrewx/ginx v0.0.0-20220818022447-742dc9e502a7 => ../ginx

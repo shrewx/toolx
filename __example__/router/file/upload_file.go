@@ -3,7 +3,7 @@ package file
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/shrewx/ginx"
-	"github.com/shrewx/toolx/__example__/router/errors"
+	"github.com/shrewx/toolx/__example__/constant/errors"
 	"mime/multipart"
 )
 

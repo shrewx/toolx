@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/shrewx/ginx"
 	"github.com/shrewx/ginx/pkg/errors"
-	"github.com/shrewx/toolx/__example__/constant"
+	"github.com/shrewx/toolx/__example__/constant/types"
 )
 
 func init() {
@@ -23,9 +23,9 @@ type CreateUserInfo struct {
 		// 地址
 		Address string `json:"address"`
 		// 职业
-		Job constant.Job `json:"job" validate:"required"`
+		Job types.Job `json:"job" validate:"required"`
 		// 城市
-		City constant.City `json:"city"`
+		City types.City `json:"city"`
 	} `in:"body"`
 }
 

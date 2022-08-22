@@ -1,4 +1,4 @@
-package constant
+package types
 
 //go:generate toolx gen enum City
 

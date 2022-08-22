@@ -1,9 +1,18 @@
 server:
-  server_config:
-    name: example
-    port: 5443
-    release: true
-    https: false
-    ssl_config:
-      cert_file: config/server.crt
-      key_file: config/server.key
+  name: example
+  port: 5443
+  https: true
+  release: false
+  exit_wait_timeout: 5
+  tls:
+    insecure_skip_verify: true
+    cert_file: config/server.crt
+    key_file: config/server.key
+  discovery:
+    address: "https://127.0.0.1:5443"
+    tags:
+      - example
+    heath_path: /health
+    timeout: 5
+    interval: 5
+    deregister_time: 10
