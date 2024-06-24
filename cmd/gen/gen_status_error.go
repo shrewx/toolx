@@ -2,7 +2,7 @@ package gen
 
 import (
 	"github.com/go-courier/packagesx"
-	"github.com/shrewx/statuserror"
+	"github.com/shrewx/ginx/pkg/statuserror"
 	"github.com/spf13/cobra"
 	"os"
 )

@@ -2,7 +2,7 @@ package gen
 
 import (
 	"github.com/go-courier/packagesx"
-	"github.com/shrewx/enum"
+	"github.com/shrewx/ginx/pkg/enum"
 
 	"github.com/spf13/cobra"
 	"os"

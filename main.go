@@ -9,7 +9,7 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "tools",
+	Use: "toolx",
 }
 
 func init() {
