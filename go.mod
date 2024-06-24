@@ -18,10 +18,10 @@ require (
 	github.com/morikuni/aec v1.0.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2 // indirect
-	github.com/shrewx/ginx v0.0.0-20240624035042-d284eec29544
+	github.com/shrewx/enum v0.0.0-20220817101904-3ffdba5b63db // indirect
+	github.com/shrewx/ginx v1.1.0
+	github.com/shrewx/statuserror v0.0.0-20221130064632-e1fd799f4b61 // indirect
 	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 	golang.org/x/tools v0.22.0 // indirect
 	gotest.tools/v3 v3.3.0 // indirect
 )
-
-replace github.com/shrewx/ginx v0.0.0-20240624032804-030826ac9b12 => ../ginx

@@ -40,7 +40,7 @@
                   "city": {
                     "allOf": [
                       {
-                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantCity"
+                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantTypesCity"
                       },
                       {
                         "description": "城市"
@@ -50,7 +50,7 @@
                   "job": {
                     "allOf": [
                       {
-                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantJob"
+                        "$ref": "#/components/schemas/GithubComShrewxToolxExampleConstantTypesJob"
                       },
                       {
                         "description": "职业"
@@ -79,53 +79,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GithubComShrewxToolxExampleRouterCrudCreateUserInfoResponse"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v0/crud/0": {
-      "put": {
-        "tags": [
-          "github.com/shrewx/toolx/__example__/router/crud"
-        ],
-        "operationId": "ModifyUserInfo",
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "name"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -206,6 +159,51 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "github.com/shrewx/toolx/__example__/router/crud"
+        ],
+        "operationId": "ModifyUserInfo",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/v0/file": {
@@ -273,6 +271,19 @@
         "responses": {
           "204": {
             "description": ""
+          },
+          "400": {
+            "description": "\u003e\n* `[UploadFileIsNotExist][40000000002]`\n",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GithubComShrewxGinxPkgStatuserrorStatusErr"
+                }
+              }
+            },
+            "x-status-errors": [
+              "[UploadFileIsNotExist][40000000002]"
+            ]
           }
         }
       }
@@ -361,22 +372,43 @@
         "x-go-struct-name": "GithubComShrewxGinxImagePNG",
         "x-go-vendor-type": "github.com/shrewx/ginx.ImagePNG"
       },
-      "GithubComShrewxToolxExampleConstantCity": {
+      "GithubComShrewxGinxPkgStatuserrorStatusErr": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "description": "状态码"
+          },
+          "key": {
+            "type": "string",
+            "description": "错误名称"
+          },
+          "message": {
+            "type": "string",
+            "description": "消息"
+          }
+        },
+        "x-go-struct-name": "GithubComShrewxGinxPkgStatuserrorStatusErr",
+        "x-go-vendor-type": "github.com/shrewx/ginx/pkg/statuserror.StatusErr"
+      },
+      "GithubComShrewxToolxExampleConstantTypesCity": {
         "type": "string",
         "enum": [
           "beijing",
           "chengdu",
           "shanghai"
         ],
+        "description": "\u003e\n* `beijing` - 医生\n* `chengdu` - 司机\n* `shanghai` - 教师\n",
         "x-enum-labels": {
           "beijing": "医生",
           "chengdu": "司机",
           "shanghai": "教师"
         },
-        "x-go-struct-name": "GithubComShrewxToolxExampleConstantCity",
-        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant.City"
+        "x-go-struct-name": "GithubComShrewxToolxExampleConstantTypesCity",
+        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant/types.City"
       },
-      "GithubComShrewxToolxExampleConstantJob": {
+      "GithubComShrewxToolxExampleConstantTypesJob": {
         "type": "string",
         "format": "int32",
         "enum": [
@@ -384,13 +416,14 @@
           "TEACHER",
           "DRIVER"
         ],
+        "description": "\u003e\n* `DOCTOR` - 医生\n* `TEACHER` - 教师\n* `DRIVER` - 司机\n",
         "x-enum-labels": {
           "DOCTOR": "医生",
           "DRIVER": "司机",
           "TEACHER": "教师"
         },
-        "x-go-struct-name": "GithubComShrewxToolxExampleConstantJob",
-        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant.Job"
+        "x-go-struct-name": "GithubComShrewxToolxExampleConstantTypesJob",
+        "x-go-vendor-type": "github.com/shrewx/toolx/__example__/constant/types.Job"
       },
       "GithubComShrewxToolxExampleRouterCrudCreateUserInfoResponse": {
         "type": "object",

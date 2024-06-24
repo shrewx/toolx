@@ -1,0 +1,26 @@
+package client_example
+
+import (
+	github_com_shrewx_ginx "github.com/shrewx/ginx"
+	github_com_shrewx_ginx_pkg_statuserror "github.com/shrewx/ginx/pkg/statuserror"
+	github_com_shrewx_toolx_example_constant_types "github.com/shrewx/toolx/__example__/constant/types"
+	github_com_shrewx_toolx_example_router_crud "github.com/shrewx/toolx/__example__/router/crud"
+)
+
+type GithubComShrewxGinxAttachment = github_com_shrewx_ginx.Attachment
+
+type GithubComShrewxGinxHTML = github_com_shrewx_ginx.HTML
+
+type GithubComShrewxGinxImagePNG = github_com_shrewx_ginx.ImagePNG
+
+type GithubComShrewxGinxPkgStatuserrorStatusErr = github_com_shrewx_ginx_pkg_statuserror.StatusErr
+
+type GithubComShrewxToolxExampleConstantTypesCity = github_com_shrewx_toolx_example_constant_types.City
+
+type GithubComShrewxToolxExampleConstantTypesJob = github_com_shrewx_toolx_example_constant_types.Job
+
+type GithubComShrewxToolxExampleRouterCrudCreateUserInfoResponse = github_com_shrewx_toolx_example_router_crud.CreateUserInfoResponse
+
+type GithubComShrewxToolxExampleRouterCrudGetHelloWorldResponse = github_com_shrewx_toolx_example_router_crud.GetHelloWorldResponse
+
+type GithubComShrewxToolxExampleRouterCrudGetUserInfoResponse = github_com_shrewx_toolx_example_router_crud.GetUserInfoResponse
